@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Ashika Angel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 62.13, "left": -44.05, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -76.81, "left": 56.61, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -82.8,
+      "left": 216.87,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -29.2,
+      "left": 263.87,
+      "attrs": { "horn": "cross", "hornColor": "#388999" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -79.2,
+      "left": -22.47,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "pir1:GND", "uno:GND.1", "black", [ "v28.84", "h-20.59" ] ],
+    [ "pir1:VCC", "uno:5V", "red", [ "v6.17", "h-132.46", "v248", "h176", "v-0.67" ] ],
+    [ "led1:A", "uno:12", "yellow", [ "v87.5", "h-133.54" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v74.17", "h-139.54" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h-7.54", "v237.07", "h-116.67" ] ],
+    [ "servo1:PWM", "uno:9", "orange", [ "h0" ] ],
+    [ "bz1:2", "uno:GND.1", "black", [ "v33.9", "h74.47" ] ],
+    [ "pir1:OUT", "uno:2", "green", [ "v13.51", "h111.81" ] ],
+    [ "bz1:1", "uno:10", "green", [ "v45.9", "h126.47" ] ]
+  ],
+  "dependencies": {}
+}
